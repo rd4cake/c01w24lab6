@@ -103,8 +103,8 @@ WORKDIR /usr/share/nginx/html
 # Copy frontend build from frontend stage to nginx directory
 COPY --from=frontend /app/quirknotes/frontend/build ./
 
-# Expose port 3000 to serve the frontend
-EXPOSE 3000
+# Expose port 80 to serve the frontend
+EXPOSE 80
 
 # Command to start nginx and serve frontend
 CMD ["nginx", "-g", "daemon off;"]
